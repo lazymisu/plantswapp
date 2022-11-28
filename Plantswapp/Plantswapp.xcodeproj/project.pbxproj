@@ -9,13 +9,16 @@
 /* Begin PBXBuildFile section */
 		8209FA542935653000D1AD2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8209FA532935653000D1AD2E /* AppDelegate.swift */; };
 		8209FA562935653000D1AD2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8209FA552935653000D1AD2E /* SceneDelegate.swift */; };
-		8209FA582935653000D1AD2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8209FA572935653000D1AD2E /* ViewController.swift */; };
 		8209FA5B2935653000D1AD2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8209FA592935653000D1AD2E /* Main.storyboard */; };
 		8209FA5D2935653200D1AD2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8209FA5C2935653200D1AD2E /* Assets.xcassets */; };
 		8209FA602935653200D1AD2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8209FA5E2935653200D1AD2E /* LaunchScreen.storyboard */; };
 		8209FA6B2935653200D1AD2E /* PlantswappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8209FA6A2935653200D1AD2E /* PlantswappTests.swift */; };
 		8209FA752935653200D1AD2E /* PlantswappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8209FA742935653200D1AD2E /* PlantswappUITests.swift */; };
 		8209FA772935653200D1AD2E /* PlantswappUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8209FA762935653200D1AD2E /* PlantswappUITestsLaunchTests.swift */; };
+		821BDEDC29356BC100F96DEC /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821BDEDB29356BC100F96DEC /* OnboardingViewController.swift */; };
+		821BDEDE29356BE200F96DEC /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821BDEDD29356BE200F96DEC /* SplashViewController.swift */; };
+		821BDEE029356BF200F96DEC /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821BDEDF29356BF200F96DEC /* SignInViewController.swift */; };
+		821BDEE229357A0400F96DEC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821BDEE129357A0400F96DEC /* SignUpViewController.swift */; };
 		82A7C0452935668800C4E518 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 82A7C0422935668800C4E518 /* Poppins-Medium.ttf */; };
 		82A7C0462935668800C4E518 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 82A7C0432935668800C4E518 /* Poppins-SemiBold.ttf */; };
 		82A7C0472935668800C4E518 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 82A7C0442935668800C4E518 /* Poppins-Regular.ttf */; };
@@ -42,7 +45,6 @@
 		8209FA502935653000D1AD2E /* Plantswapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Plantswapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8209FA532935653000D1AD2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8209FA552935653000D1AD2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8209FA572935653000D1AD2E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8209FA5A2935653000D1AD2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8209FA5C2935653200D1AD2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8209FA5F2935653200D1AD2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,6 +54,10 @@
 		8209FA702935653200D1AD2E /* PlantswappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlantswappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8209FA742935653200D1AD2E /* PlantswappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantswappUITests.swift; sourceTree = "<group>"; };
 		8209FA762935653200D1AD2E /* PlantswappUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantswappUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		821BDEDB29356BC100F96DEC /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		821BDEDD29356BE200F96DEC /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		821BDEDF29356BF200F96DEC /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		821BDEE129357A0400F96DEC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		82A7C0422935668800C4E518 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		82A7C0432935668800C4E518 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		82A7C0442935668800C4E518 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
@@ -181,7 +187,10 @@
 		8209FA88293565E700D1AD2E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8209FA572935653000D1AD2E /* ViewController.swift */,
+				821BDEDD29356BE200F96DEC /* SplashViewController.swift */,
+				821BDEDB29356BC100F96DEC /* OnboardingViewController.swift */,
+				821BDEDF29356BF200F96DEC /* SignInViewController.swift */,
+				821BDEE129357A0400F96DEC /* SignUpViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -303,6 +312,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				CLASSPREFIX = "";
 				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
@@ -374,9 +384,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8209FA582935653000D1AD2E /* ViewController.swift in Sources */,
+				821BDEE229357A0400F96DEC /* SignUpViewController.swift in Sources */,
 				8209FA542935653000D1AD2E /* AppDelegate.swift in Sources */,
+				821BDEDC29356BC100F96DEC /* OnboardingViewController.swift in Sources */,
 				8209FA562935653000D1AD2E /* SceneDelegate.swift in Sources */,
+				821BDEE029356BF200F96DEC /* SignInViewController.swift in Sources */,
+				821BDEDE29356BE200F96DEC /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

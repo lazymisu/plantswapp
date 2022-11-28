@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QtK-bl-PpD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6ru-Mu-640">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
@@ -20,12 +20,12 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Onboarding View Controller-->
         <scene sceneID="zRH-Hv-NMT">
             <objects>
-                <viewController id="DYi-2R-cqK" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OnboardingViewController" id="DYi-2R-cqK" customClass="OnboardingViewController" customModule="Plantswapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qPj-y1-Lz1">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZi-Zx-PnA">
@@ -104,12 +104,33 @@ Plantswapp is an application dedicated to plant lovers.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vdA-R4-upi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1931" y="-26"/>
+            <point key="canvasLocation" x="1931" y="1491"/>
         </scene>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="Ldk-13-80H">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6ru-Mu-640" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Le5-dH-cd6">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UU7-Zj-D7i">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="iSD-h2-jWt" kind="relationship" relationship="rootViewController" id="sxS-w5-rzl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eel-Lj-cGf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1001.5384615384615" y="711.61137440758296"/>
+        </scene>
+        <!--Splash View Controller-->
         <scene sceneID="7hg-ix-vHt">
             <objects>
-                <viewController id="iSD-h2-jWt" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SplashViewController" id="iSD-h2-jWt" customClass="SplashViewController" customModule="Plantswapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="57o-OB-40Y">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -130,7 +151,8 @@ Plantswapp is an application dedicated to plant lovers.</string>
                     </view>
                     <navigationItem key="navigationItem" id="axX-rj-7X5"/>
                     <connections>
-                        <segue destination="QtK-bl-PpD" kind="show" id="ZLN-dn-jvU"/>
+                        <segue destination="QtK-bl-PpD" kind="show" identifier="SignInViewController" id="ZLN-dn-jvU"/>
+                        <segue destination="DYi-2R-cqK" kind="presentation" identifier="OnboardingViewController" id="0OE-M9-ohm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SW7-5G-jnO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -140,7 +162,7 @@ Plantswapp is an application dedicated to plant lovers.</string>
         <!--Sign in-->
         <scene sceneID="IFy-ag-c3H">
             <objects>
-                <viewController id="QtK-bl-PpD" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignInViewController" id="QtK-bl-PpD" customClass="SignInViewController" customModule="Plantswapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mmy-xW-wBW">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -158,7 +180,7 @@ Plantswapp is an application dedicated to plant lovers.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="n4a-xR-Fcb">
-                                <rect key="frame" x="16" y="240" width="358" height="300"/>
+                                <rect key="frame" x="16" y="240" width="358" height="351"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="H8V-do-pb1">
                                         <rect key="frame" x="0.0" y="0.0" width="358" height="63"/>
@@ -232,51 +254,279 @@ Plantswapp is an application dedicated to plant lovers.</string>
                                             </textField>
                                         </subviews>
                                     </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KPd-pc-Tp5">
+                                        <rect key="frame" x="0.0" y="316" width="358" height="35"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Qj-uQ-hJa">
+                                                <rect key="frame" x="0.0" y="0.0" width="239.33333333333334" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="mxy-y7-S3G"/>
+                                                </constraints>
+                                                <color key="tintColor" systemColor="systemGray3Color"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="checkmark.square.fill" catalog="system">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="I accept the ">
+                                                            <attributes>
+                                                                <color key="NSColor" name="Primary"/>
+                                                                <font key="NSFont" size="15" name="Poppins-Regular"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="Terms of Service">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.35686274509803922" green="0.64313725490196072" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="15" name="Poppins-Regular"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content=".">
+                                                            <attributes>
+                                                                <color key="NSColor" name="Primary"/>
+                                                                <font key="NSFont" size="15" name="Poppins-Regular"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <connections>
+                                                    <action selector="tapAcceptTermsButton:" destination="QtK-bl-PpD" eventType="touchUpInside" id="bAI-9B-fQn"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="0Qj-uQ-hJa" firstAttribute="leading" secondItem="KPd-pc-Tp5" secondAttribute="leading" id="AlU-NW-QfC"/>
+                                            <constraint firstItem="0Qj-uQ-hJa" firstAttribute="top" secondItem="KPd-pc-Tp5" secondAttribute="top" id="Exe-OE-F8o"/>
+                                            <constraint firstAttribute="bottom" secondItem="0Qj-uQ-hJa" secondAttribute="bottom" id="UXa-t5-s5f"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0Qj-uQ-hJa" secondAttribute="trailing" constant="20" symbolic="YES" id="ddG-le-Uqu"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90b-p8-Gx5">
+                                <rect key="frame" x="80" y="623" width="230" height="35"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Gic-C9-pYo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Sign in">
+                                    <color key="titleColor" name="Background"/>
+                                </state>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="nCE-O7-1h6">
+                                <rect key="frame" x="63" y="759" width="264.33333333333331" height="35"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOR-eY-rK4">
+                                        <rect key="frame" x="0.0" y="0.0" width="197.33333333333334" height="35"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
+                                        <color key="textColor" name="Primary"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHO-Em-afv">
+                                        <rect key="frame" x="203.33333333333331" y="0.0" width="61" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="kKk-Bm-LCw"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Sign up!">
+                                            <color key="titleColor" name="AccentColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="sf7-xF-OOu" kind="show" identifier="SignUpViewController" id="qfP-fM-gms"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HSK-eq-7GY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="HSK-eq-7GY" firstAttribute="trailing" secondItem="90b-p8-Gx5" secondAttribute="trailing" constant="80" id="7rM-w5-iGz"/>
                             <constraint firstItem="HSK-eq-7GY" firstAttribute="trailing" secondItem="Aqw-zY-z85" secondAttribute="trailing" constant="16" id="FJv-ER-wFV"/>
+                            <constraint firstItem="90b-p8-Gx5" firstAttribute="top" secondItem="n4a-xR-Fcb" secondAttribute="bottom" constant="32" id="FT4-ye-Rts"/>
                             <constraint firstItem="Aqw-zY-z85" firstAttribute="leading" secondItem="HSK-eq-7GY" secondAttribute="leading" constant="16" id="G1Y-9U-Vuq"/>
+                            <constraint firstItem="90b-p8-Gx5" firstAttribute="leading" secondItem="HSK-eq-7GY" secondAttribute="leading" constant="80" id="JPS-YK-z1g"/>
                             <constraint firstAttribute="trailing" secondItem="MnA-nG-aHu" secondAttribute="trailing" constant="16" id="ShP-rw-trP"/>
+                            <constraint firstItem="nCE-O7-1h6" firstAttribute="centerX" secondItem="mmy-xW-wBW" secondAttribute="centerX" id="UnN-VR-EGG"/>
                             <constraint firstItem="HSK-eq-7GY" firstAttribute="trailing" secondItem="n4a-xR-Fcb" secondAttribute="trailing" constant="16" id="Vve-cQ-PBl"/>
                             <constraint firstItem="n4a-xR-Fcb" firstAttribute="top" secondItem="Aqw-zY-z85" secondAttribute="bottom" constant="32" id="a0Z-kK-0TH"/>
                             <constraint firstItem="n4a-xR-Fcb" firstAttribute="leading" secondItem="HSK-eq-7GY" secondAttribute="leading" constant="16" id="eNv-ng-UpY"/>
                             <constraint firstItem="Aqw-zY-z85" firstAttribute="top" secondItem="MnA-nG-aHu" secondAttribute="bottom" constant="8" symbolic="YES" id="efD-3c-vyH"/>
                             <constraint firstItem="MnA-nG-aHu" firstAttribute="leading" secondItem="HSK-eq-7GY" secondAttribute="leading" constant="16" id="jtb-vR-WBa"/>
+                            <constraint firstItem="HSK-eq-7GY" firstAttribute="bottom" secondItem="nCE-O7-1h6" secondAttribute="bottom" constant="16" id="rVU-Ib-tJD"/>
                             <constraint firstItem="MnA-nG-aHu" firstAttribute="top" secondItem="HSK-eq-7GY" secondAttribute="top" constant="32" id="zVI-aD-j2i"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="aZN-ru-ehT" appends="YES" id="7Pd-oK-YpY"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Sign in" id="OBY-rO-E3P"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4rs-RJ-0aM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2890.7692307692305" y="711.61137440758296"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Ldk-13-80H">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6ru-Mu-640" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Le5-dH-cd6">
-                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
+                <tapGestureRecognizer id="aZN-ru-ehT">
                     <connections>
-                        <segue destination="iSD-h2-jWt" kind="relationship" relationship="rootViewController" id="sxS-w5-rzl"/>
+                        <action selector="tapHideKeyboardGesture:" destination="QtK-bl-PpD" id="jvP-my-KeM"/>
                     </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Eel-Lj-cGf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1001.5384615384615" y="711.61137440758296"/>
+            <point key="canvasLocation" x="2889.2307692307691" y="711.61137440758296"/>
+        </scene>
+        <!--Sign up-->
+        <scene sceneID="5Rx-Ew-wYH">
+            <objects>
+                <viewController storyboardIdentifier="SignUpViewController" id="sf7-xF-OOu" customClass="SignUpViewController" customModule="Plantswapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="My0-Je-hB3">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi! Welcome back!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U94-Sh-PUV">
+                                <rect key="frame" x="16" y="123" width="358" height="28"/>
+                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
+                                <color key="textColor" name="Primary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wanna buy some plants?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdF-O8-XIP">
+                                <rect key="frame" x="16" y="159" width="358" height="21"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
+                                <color key="textColor" name="Primary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="sPH-Wa-t5d">
+                                <rect key="frame" x="16" y="212" width="358" height="185"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nL9-nR-aL6">
+                                        <rect key="frame" x="0.0" y="0.0" width="358" height="63"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name or E-mail" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IxT-Xd-PPS">
+                                                <rect key="frame" x="0.0" y="0.0" width="358" height="21"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
+                                                <color key="textColor" name="Primary"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="QIN-uD-ZbC">
+                                                <rect key="frame" x="0.0" y="29" width="358" height="34"/>
+                                                <color key="backgroundColor" name="Background"/>
+                                                <color key="textColor" name="Primary"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="continue" enablesReturnKeyAutomatically="YES" textContentType="name"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ioa-lr-Xvs">
+                                        <rect key="frame" x="0.0" y="79" width="358" height="106"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGM-Ms-oWW">
+                                                <rect key="frame" x="0.0" y="0.0" width="358" height="21"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
+                                                <color key="textColor" name="Primary"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="q3s-yH-cKW">
+                                                <rect key="frame" x="0.0" y="29" width="358" height="34"/>
+                                                <color key="backgroundColor" name="Background"/>
+                                                <color key="textColor" name="Primary"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="continue" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tk9-8A-NrE">
+                                                <rect key="frame" x="0.0" y="71" width="358" height="35"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lEF-NZ-SMC">
+                                                        <rect key="frame" x="242" y="0.0" width="116" height="35"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="35" id="450-rk-pi4"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Forgot password?">
+                                                            <color key="titleColor" name="Primary"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="lEF-NZ-SMC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="tk9-8A-NrE" secondAttribute="leading" constant="20" symbolic="YES" id="0ir-Qm-W46"/>
+                                                    <constraint firstAttribute="trailing" secondItem="lEF-NZ-SMC" secondAttribute="trailing" id="PXE-gc-vv3"/>
+                                                    <constraint firstItem="lEF-NZ-SMC" firstAttribute="top" secondItem="tk9-8A-NrE" secondAttribute="top" id="oaP-pe-ael"/>
+                                                    <constraint firstAttribute="bottom" secondItem="lEF-NZ-SMC" secondAttribute="bottom" id="uPu-uD-h8X"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwn-s1-DLj">
+                                <rect key="frame" x="80" y="429" width="230" height="35"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="ogL-ic-fFQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Sign up">
+                                    <color key="titleColor" name="Background"/>
+                                </state>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="e36-lM-LNt">
+                                <rect key="frame" x="66" y="759" width="258" height="35"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Doesn't have account yet?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uvg-Zt-r4u">
+                                        <rect key="frame" x="0.0" y="0.0" width="198" height="35"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
+                                        <color key="textColor" name="Primary"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9P-2C-G3V">
+                                        <rect key="frame" x="204" y="0.0" width="54" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="5g6-G8-A8g"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Sign in!">
+                                            <color key="titleColor" name="AccentColor"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QYg-iD-odY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="sPH-Wa-t5d" firstAttribute="leading" secondItem="QYg-iD-odY" secondAttribute="leading" constant="16" id="Aeb-eX-MVV"/>
+                            <constraint firstItem="QYg-iD-odY" firstAttribute="trailing" secondItem="fdF-O8-XIP" secondAttribute="trailing" constant="16" id="DMd-RM-FY5"/>
+                            <constraint firstItem="sPH-Wa-t5d" firstAttribute="top" secondItem="fdF-O8-XIP" secondAttribute="bottom" constant="32" id="NaK-cJ-a1a"/>
+                            <constraint firstItem="QYg-iD-odY" firstAttribute="trailing" secondItem="sPH-Wa-t5d" secondAttribute="trailing" constant="16" id="XgF-RM-sLV"/>
+                            <constraint firstItem="QYg-iD-odY" firstAttribute="bottom" secondItem="e36-lM-LNt" secondAttribute="bottom" constant="16" id="dDp-T1-juF"/>
+                            <constraint firstAttribute="trailing" secondItem="U94-Sh-PUV" secondAttribute="trailing" constant="16" id="dXn-sO-DcD"/>
+                            <constraint firstItem="U94-Sh-PUV" firstAttribute="top" secondItem="QYg-iD-odY" secondAttribute="top" constant="32" id="evZ-Yd-Zqp"/>
+                            <constraint firstItem="bwn-s1-DLj" firstAttribute="leading" secondItem="QYg-iD-odY" secondAttribute="leading" constant="80" id="iCN-xt-rZ8"/>
+                            <constraint firstItem="e36-lM-LNt" firstAttribute="centerX" secondItem="My0-Je-hB3" secondAttribute="centerX" id="j3c-8l-aux"/>
+                            <constraint firstItem="bwn-s1-DLj" firstAttribute="top" secondItem="sPH-Wa-t5d" secondAttribute="bottom" constant="32" id="kPG-p5-egy"/>
+                            <constraint firstItem="U94-Sh-PUV" firstAttribute="leading" secondItem="QYg-iD-odY" secondAttribute="leading" constant="16" id="nzx-cJ-bNo"/>
+                            <constraint firstItem="fdF-O8-XIP" firstAttribute="top" secondItem="U94-Sh-PUV" secondAttribute="bottom" constant="8" symbolic="YES" id="oew-5e-Rm6"/>
+                            <constraint firstItem="fdF-O8-XIP" firstAttribute="leading" secondItem="QYg-iD-odY" secondAttribute="leading" constant="16" id="pVm-kp-3MD"/>
+                            <constraint firstItem="QYg-iD-odY" firstAttribute="trailing" secondItem="bwn-s1-DLj" secondAttribute="trailing" constant="80" id="yEx-sK-Bhi"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="NJr-us-uwO" appends="YES" id="Q8J-rP-hUW"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sign up" id="fqX-jx-Mra"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oov-Ye-cLT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="NJr-us-uwO"/>
+            </objects>
+            <point key="canvasLocation" x="3763" y="712"/>
         </scene>
     </scenes>
     <resources>
+        <image name="checkmark.square.fill" catalog="system" width="128" height="114"/>
         <namedColor name="AccentColor">
-            <color red="0.35699999332427979" green="0.64300000667572021" blue="0.45500001311302185" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.35686274509803922" green="0.64313725490196072" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Background">
             <color red="0.96100002527236938" green="0.96100002527236938" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -286,6 +536,9 @@ Plantswapp is an application dedicated to plant lovers.</string>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
